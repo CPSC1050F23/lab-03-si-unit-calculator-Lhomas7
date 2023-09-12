@@ -1,6 +1,6 @@
 """
 Welcome to Lab 03.
-
+knkjnjknjknl
 We will be grading for Header, Comments, Formatting.
 
 Follow the instructions in the lab document. 
@@ -66,7 +66,7 @@ if type_unit == 'distance':
 
 
 """ask user for conversion units and convert to grams"""
-elif type_unit == 'mass':
+if type_unit == 'mass':
     print("Please select one of the following to convert to grams: mg kg lbs:")
     unit = input().strip()
     if unit == 'mg':
@@ -101,7 +101,7 @@ elif type_unit == 'mass':
 
 
 """ask user for conversion units and converts to meters per second"""
-elif type_unit == 'speed':
+if type_unit == 'speed':
     print("Please select one of the following to convert to meters per second: km/h ft/s miles/hour:")
     unit = input().strip()
     if unit == 'km/h':
