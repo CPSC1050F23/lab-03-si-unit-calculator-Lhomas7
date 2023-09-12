@@ -144,7 +144,7 @@ if type_unit == 'temperature':
 
 
 """print invalid unit type if unit is type of unit that can't be converted"""
-else:
+if type_unit != 'temperature' and type_unit != 'speed' and type_unit != 'mass' and type_unit != 'distance':
     print("Invalid unit type")
 
 
