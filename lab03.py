@@ -70,6 +70,8 @@ if type_unit == 'distance':
         conv = value * 0.3048
         print(f'{value:.2f} {unit} in meters: {conv:.2f}')
     else:
+        print("Please input a value:")
+        value = float(input().strip())
         print("Unsupported unit")
 
 
