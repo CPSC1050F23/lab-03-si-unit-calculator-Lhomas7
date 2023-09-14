@@ -80,7 +80,7 @@ if type_unit == 'distance':
 
 """ask user for conversion units and convert to grams"""
 if type_unit == 'mass':
-    print("Please select one of the following to convert to grams: mg kg lbs:")
+    print("Please select one of the following to convert to grams: mg g kg lbs:")
     unit = input().strip()
     if unit == 'mg':
         print("Please input a value:")
@@ -97,6 +97,14 @@ if type_unit == 'mass':
             print("You can't have a negative mass!")
         else:
             conv = value * 1000
+            print(f'{value:.2f} {unit} in grams: {conv:.2f}')
+    elif unit == 'g':
+        print("please input a value:")
+        value = float(input().strip())
+        if value < 0:
+            print("You can't have a negative mass!")
+        else:
+            conv = value
             print(f'{value:.2f} {unit} in grams: {conv:.2f}')
     elif unit == 'lbs':
         print("Please input a value:")
@@ -115,19 +123,24 @@ if type_unit == 'mass':
 
 """ask user for conversion units and converts to meters per second"""
 if type_unit == 'speed':
-    print("Please select one of the following to convert to meters per second: km/h ft/s miles/hour:")
+    print("Please select one of the following to convert to meters per second: m/s km/h ft/s mph:")
     unit = input().strip()
     if unit == 'km/h':
         print("Please input a value:")
         value = float(input().strip())
         conv = value * 0.277778
         print(f'{value:.2f} {unit} in meters per second: {conv:.2f}')
+    elif unit == 'm/s':
+        print("Please input a value:")
+        value = float(input().strip())
+        conv = value
+        print(f'{value:.2f} {unit} in meters per second: {conv:.2f}')
     elif unit == 'ft/s':
         print("Please input a value:")
         value = float(input().strip())
         conv = value * 0.3048
         print(f'{value:.2f} {unit} in meters per second: {conv:.2f}')
-    elif unit == 'miles/hour':
+    elif unit == 'mph':
         print("Please input a value:")
         value = float(input().strip())
         conv = value * 0.44704
@@ -140,12 +153,17 @@ if type_unit == 'speed':
 
 """ask user for conversion units and convert to Celsius"""
 if type_unit == 'temperature':
-    print("Please select one of the following to convert to Celcius: F K:")
+    print("Please select one of the following to convert to Celcius: C F K:")
     unit = input().strip()
     if unit == 'F':
         print("Please input a value:")
         value = float(input().strip())
         conv = (value - 32) * 5/9
+        print(f'{value:.2f} {unit} in Celsius: {conv:.2f}')
+    elif unit == 'C':
+        print("Please input a value:")
+        value = float(input().strip())
+        conv = value
         print(f'{value:.2f} {unit} in Celsius: {conv:.2f}')
     elif unit == 'K':
         print("Please input a value:")
